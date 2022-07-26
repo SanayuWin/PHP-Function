@@ -24,13 +24,13 @@ function ConvertText($Data){
 Function Check Text
 ```php
 function Chk_S($text){
-    $text = str_replace("&amp;","&",$text);
-    $text = str_replace("amp;","",$text);
-   	$text = str_replace("&quot;","''",$text);
-   	$text = str_replace("&lt;","<",$text);
-   	$text = str_replace("&gt;",">",$text);
-  	$text = str_replace("&#39;","'",$text);
-   	$text = str_replace("&#039;","'",$text);
-    return $text;
+  $text = str_replace("&amp;","&",$text);
+  $text = str_replace("amp;","",$text);
+  $text = str_replace("&quot;","''",$text);
+  $text = str_replace("&lt;","<",$text);
+  $text = str_replace("&gt;",">",$text);
+  $text = str_replace("&#39;","'",$text);
+  $text = str_replace("&#039;","'",$text);
+  return $text;
 }
 ```
