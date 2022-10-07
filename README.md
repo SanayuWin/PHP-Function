@@ -16,7 +16,7 @@ function ConvertText($Data){
   $val=stripslashes($val);
   $val=htmlspecialchars($val,ENT_NOQUOTES); 		
   $Data=htmlspecialchars($val,ENT_QUOTES); 
-  
+  $Data=str_replace("@","&#64;",$Data);	
   return $Data;
 }
 ```
