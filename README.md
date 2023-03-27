@@ -34,3 +34,17 @@ function Chk_S($text){
   return $text;
 }
 ```
+
+Function Date
+```php
+// Month ++
+$ArrDate = array();
+while($TempDate <= $DateEnd){
+  $SetArr = explode("-",$TempDate);
+  $Year = $SetArr[0];
+  $ArrDate[$Year][$TempDate] = $TempDate;
+  $TempDate = date('Y-m', strtotime($TempDate . ' +1 month'));
+}
+
+```
+
