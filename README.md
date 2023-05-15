@@ -46,6 +46,25 @@ while($TempDate <= $DateEnd){
 	$ArrDate[$Year][$TempDate] = $TempDate;
 	$TempDate = date('Y-m', strtotime($TempDate . ' +1 month'));
 }
-
 ```
 
+FPDF
+Function spacing  height
+```php
+private $lineHeight;
+
+function SetLineHeight($height) {
+	$this->lineHeight = $height;
+}
+
+function MultiCell($w, $h, $txt, $border = 0, $align = 'J', $fill = false) {
+	$lineHeight = $this->lineHeight ? $this->lineHeight : $h;
+	parent::MultiCell($w, $lineHeight, $txt, $border, $align, $fill);
+}
+
+// Use
+$pdf->SetLineHeight(0.08); // Set line spacing height to 0.08
+$pdf->MultiCell(0.63, 0.15, iconv('UTF-8', 'TIS-620', $Simple), 1, 'L', false);
+
+
+```
